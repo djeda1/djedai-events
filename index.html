@@ -1,0 +1,334 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DJEDAI — регистрация участников мероприятий</title>
+<meta name="description" content="Регистрация и аккредитация участников выставок, форумов и конференций под ключ: ПО, оборудование, персонал, бейдж за 10 секунд, аналитика после события.">
+<meta name="color-scheme" content="light">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="wrap header__in">
+    <a class="logo" href="#top">DJEDAI</a>
+    <nav class="menu" aria-label="Разделы">
+      <a href="#services">Услуги</a>
+      <a href="#process">Процесс</a>
+      <a href="#calc">Расчёт</a>
+      <a href="#report">Аналитика</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+    <a class="header__phone" href="tel:+77752080996">+7 775 208 09 96</a>
+    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Первый экран -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__text">
+        <h1>Очередь на входе&nbsp;— <span class="hl">наша забота</span></h1>
+        <p class="lead">Регистрация и аккредитация участников под ключ: программное обеспечение, оборудование, персонал и база данных после события.</p>
+        <div class="actions">
+          <a class="btn btn--acc" href="#contact">Оставить заявку</a>
+          <a class="btn btn--line" href="#calc">Рассчитать стойки</a>
+        </div>
+      </div>
+
+      <div class="hero__visual">
+        <div class="lanyard" aria-hidden="true"><span></span><span></span></div>
+        <div class="badge" id="badge" role="img" aria-label="Пример бейджа участника с QR-кодом">
+          <div class="badge__clip"></div>
+          <div class="badge__head"><span>Energy Forum</span><span>Астана · 2026</span></div>
+          <div class="badge__body">
+            <div class="badge__ava" id="badgeAva">АС</div>
+            <p class="badge__name" id="badgeName">Айгерим<br>Садыкова</p>
+            <p class="badge__org" id="badgeOrg">KazMunai Systems</p>
+            <div class="badge__qr"><svg class="qr" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg><i class="laser"></i></div>
+          </div>
+          <div class="badge__status" id="badgeStatus" data-s="vip">VIP · все зоны</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="wrap">
+      <dl class="stats">
+        <div><dt>10 сек</dt><dd>на одного гостя</dd></div>
+        <div><dt>15 000</dt><dd>гостей на одном событии</dd></div>
+        <div><dt>60+</dt><dd>проведённых мероприятий</dd></div>
+        <div><dt>100%</dt><dd>довольных заказчиков</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Услуги -->
+  <section class="section" id="services">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Что мы делаем?</h2>
+        <p class="lead">Первое впечатление о мероприятии создаёт регистрация. Мы отвечаем за всё, что происходит на входе.</p>
+      </header>
+      <div class="cols">
+        <article>
+          <h3>Система регистрации под&nbsp;ключ</h3>
+          <p>Полный цикл регистрации и аккредитации участников и посетителей: от формы на сайте до бейджа на стойке.</p>
+        </article>
+        <article>
+          <h3>Персонал на время события</h3>
+          <p>Вежливые регистраторы со знанием иностранных языков, обученные работе с нашим ПО.</p>
+        </article>
+        <article>
+          <h3>Сбор и анализ данных</h3>
+          <p>После мероприятия передаём точный анализ посещаемости и полную базу участников.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Процесс -->
+  <section class="section" id="process">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Как проходит регистрация?</h2>
+        <p class="lead">Четыре шага от приглашения до отчёта.</p>
+      </header>
+      <div class="flow">
+        <div class="flow__tabs" role="tablist" aria-label="Шаги регистрации">
+          <button role="tab" aria-selected="true" data-step="0"><span class="flow__n">1</span><b>До события</b><small>Онлайн-регистрация и электронный билет</small></button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-step="1"><span class="flow__n">2</span><b>На входе</b><small>Сканирование и бейдж за 10 секунд</small></button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-step="2"><span class="flow__n">3</span><b>Внутри</b><small>Доступ по зонам, секциям и статусам</small></button>
+          <button role="tab" aria-selected="false" tabindex="-1" data-step="3"><span class="flow__n">4</span><b>После</b><small>Аналитика и полная база данных</small></button>
+        </div>
+
+        <div class="flow__stage">
+          <div class="panel is-on" role="tabpanel">
+            <div class="mock">
+              <div class="mock__bar"><i></i><i></i><i></i><span>energyforum.kz/register</span></div>
+              <div class="mock__in">
+                <div class="mock__f"><small>Имя и фамилия</small><span>Айгерим Садыкова</span></div>
+                <div class="mock__f"><small>Компания</small><span>KazMunai Systems</span></div>
+                <div class="mock__f"><small>Статус</small><span class="chips"><em>Участник</em><em class="on">VIP</em><em>Пресса</em></span></div>
+                <div class="mock__btn">Зарегистрироваться</div>
+              </div>
+            </div>
+            <div class="ticket">
+              <div><small>Электронный билет</small><b>Energy Forum 2026</b><small>14–15 мая · EXPO, Астана</small></div>
+              <svg class="qr qr--sm" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg>
+            </div>
+            <p class="panel__note">Билет приходит на почту и в WhatsApp. На входе гостю не нужно ничего диктовать — только показать QR.</p>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="scan">
+              <div class="scan__frame"><svg class="qr qr--md" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg><i class="laser"></i></div>
+              <ul class="scan__log">
+                <li><span>09:14:02</span>QR считан</li>
+                <li><span>09:14:02</span>Найден: Садыкова А. · VIP</li>
+                <li><span>09:14:04</span>Бейдж отправлен на принтер №3</li>
+                <li class="ok"><span>09:14:09</span>Бейдж выдан</li>
+              </ul>
+            </div>
+            <div class="timer"><span id="stepTimer">7,5</span><p>секунд от сканирования до бейджа в руке</p></div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="zones">
+              <div class="zone"><b>Пленарный зал</b><span class="st-ok">Открыт</span><small>Все статусы</small></div>
+              <div class="zone"><b>VIP-лаунж</b><span class="st-ok">Открыт</span><small>VIP и спикеры</small></div>
+              <div class="zone"><b>Секция «Нефтегаз»</b><span class="st-warn">По регламенту</span><small>10:00–12:30</small></div>
+              <div class="zone"><b>Пресс-центр</b><span class="st-no">Закрыт</span><small>Только пресса</small></div>
+            </div>
+            <div class="turnstile"><span>Турникет 2 · Садыкова А.</span><b>Доступ разрешён</b></div>
+          </div>
+
+          <div class="panel" role="tabpanel">
+            <div class="kpis">
+              <div><b>87%</b><small>явка от зарегистрированных</small></div>
+              <div><b>09:15</b><small>пик входа</small></div>
+              <div><b>9,6 с</b><small>среднее время</small></div>
+            </div>
+            <div class="export"><span>Экспорт базы</span><em>XLSX</em><em>CSV</em><em>PDF-отчёт</em><em>API</em></div>
+            <p class="panel__note">Через 24 часа после закрытия — отчёт по дням, зонам, статусам и источникам регистрации.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Преимущества -->
+  <section class="section" id="advantages">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Меньше хаоса на входе, больше данных на&nbsp;выходе</h2>
+      </header>
+      <div class="bento">
+        <article class="b b--queue">
+          <h3>Сокращение очередей</h3>
+          <p>Электронная регистрация на сайте события с выдачей электронного билета.</p>
+          <div class="queue" aria-hidden="true">
+            <div><small>Бумажные списки</small><span class="q q--old"><i style="--w:100%"></i></span><b>~25 мин</b></div>
+            <div><small>DJEDAI</small><span class="q q--new"><i style="--w:10%"></i></span><b>~2 мин</b></div>
+          </div>
+        </article>
+        <article class="b b--speed">
+          <p class="big">10 сек</p>
+          <h3>Оперативная выдача бейджей</h3>
+          <p>Печать на месте, без сортировки по алфавиту.</p>
+        </article>
+        <article class="b b--access">
+          <h3>Контроль доступа</h3>
+          <p>По секциям, по регламенту, по статусам.</p>
+          <div class="statuses"><span data-s="part">Участник</span><span data-s="vip">VIP</span><span data-s="press">Пресса</span><span data-s="speaker">Спикер</span><span data-s="staff">Организатор</span></div>
+        </article>
+        <article class="b b--soft">
+          <h3>Своё программное обеспечение</h3>
+          <p>Разработано под массовые мероприятия: онлайн-форма, офлайн-режим на стойках, синхронизация в реальном времени.</p>
+          <span class="sync"><i class="pulse"></i>12 стоек онлайн · 0 ошибок</span>
+        </article>
+        <article class="b b--gear">
+          <h3>Оборудование</h3>
+          <p>Техническая база для событий любого масштаба.</p>
+          <dl class="gear">
+            <div><dt>40</dt><dd>стоек</dd></div>
+            <div><dt>30</dt><dd>принтеров</dd></div>
+            <div><dt>60</dt><dd>сканеров</dd></div>
+            <div><dt>12</dt><dd>турникетов</dd></div>
+          </dl>
+        </article>
+        <article class="b b--staff">
+          <h3>Опытный персонал</h3>
+          <p>Квалифицированные вежливые регистраторы со знанием иностранных языков.</p>
+          <div class="langs"><span>RU</span><span>KZ</span><span>EN</span><span>中文</span><span>TR</span></div>
+        </article>
+        <article class="b b--image">
+          <h3>Никакой волокиты и&nbsp;сильный имидж</h3>
+          <p>Собираем данные из Excel, CRM и приглашений в одну базу без дублей. Стойки, бейджи и форма — в фирменном стиле события.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Расчёт -->
+  <section class="section" id="calc">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Сколько стоек нужно вашему событию</h2>
+        <p class="lead">Предварительный расчёт, чтобы очередь на входе не превышала пары минут.</p>
+      </header>
+      <div class="calc">
+        <div class="calc__in">
+          <div class="field">
+            <label for="cGuests">Число гостей</label>
+            <output id="oGuests">3 000</output>
+            <input type="range" id="cGuests" min="100" max="15000" step="100" value="3000">
+          </div>
+          <div class="field">
+            <label for="cWindow">Основной заезд, часов</label>
+            <output id="oWindow">1,5</output>
+            <input type="range" id="cWindow" min="0.5" max="4" step="0.5" value="1.5">
+          </div>
+          <div class="field">
+            <label for="cPre">Зарегистрированы онлайн</label>
+            <output id="oPre">70%</output>
+            <input type="range" id="cPre" min="0" max="100" step="5" value="70">
+          </div>
+        </div>
+        <div class="calc__out" aria-live="polite">
+          <p class="calc__label">Рекомендуем</p>
+          <p class="calc__big"><span id="rStations">9</span> стоек</p>
+          <dl class="calc__list">
+            <div><dt>Регистраторов</dt><dd id="rStaff">11</dd></div>
+            <div><dt>Время на гостя</dt><dd id="rAvg">14,6 с</dd></div>
+            <div><dt>Ожидание в очереди</dt><dd id="rQueue">до 2 мин</dd></div>
+          </dl>
+          <a class="btn btn--acc" href="#contact" id="calcToForm">Отправить расчёт</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Аналитика -->
+  <section class="section" id="report">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>После события остаются не&nbsp;списки, а&nbsp;данные</h2>
+      </header>
+      <div class="dash">
+        <aside class="dash__side">
+          <div class="dash__title"><b>Energy Forum 2026</b><small>День 1 · 14 мая</small></div>
+          <div class="kpi"><small>Зарегистрировано</small><b>5 530</b></div>
+          <div class="kpi"><small>Пришли</small><b>4 812</b><em>87%</em></div>
+          <div class="kpi"><small>Среднее время у стойки</small><b>9,6 с</b></div>
+          <div class="split">
+            <small>По статусам</small>
+            <div class="split__bar"><i data-s="part" style="--w:64%"></i><i data-s="vip" style="--w:8%"></i><i data-s="press" style="--w:6%"></i><i data-s="speaker" style="--w:5%"></i><i data-s="staff" style="--w:17%"></i></div>
+            <ul class="legend"><li data-s="part">Участники 64%</li><li data-s="vip">VIP 8%</li><li data-s="press">Пресса 6%</li><li data-s="speaker">Спикеры 5%</li><li data-s="staff">Экспоненты 17%</li></ul>
+          </div>
+        </aside>
+        <div class="dash__main">
+          <div class="dash__head"><b>Вход гостей, каждые 15 минут</b><small id="chartTip">Наведите на столбец</small></div>
+          <div class="chart" id="chart" role="img" aria-label="Гистограмма входа гостей по 15-минутным интервалам, пик в 09:15"></div>
+          <div class="chart__axis" id="chartAxis"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Клиенты -->
+  <section class="section" id="clients">
+    <div class="wrap">
+      <header class="sec-head">
+        <h2>Нам доверяют</h2>
+      </header>
+      <ul class="clients">
+        <li>KDX</li><li>Auto Expo</li><li>IBM</li><li>BDL</li><li>Archi</li>
+        <li>ЖКХ Expo</li><li>SU</li><li>Farm KZ</li><li>Agro</li><li>Cteca</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Контакты -->
+  <section class="contact" id="contact">
+    <div class="wrap contact__in">
+      <div class="contact__text">
+        <h2>Расскажите о&nbsp;вашем событии</h2>
+        <p class="lead">Пришлём расчёт и план регистрации в течение рабочего дня.</p>
+        <ul class="contact__list">
+          <li><a href="mailto:djedai.dev@gmail.com">djedai.dev@gmail.com</a></li>
+          <li><a href="tel:+77752080996">+7 775 208 09 96</a></li>
+          <li><a href="tel:+77015224111">+7 701 522 41 11</a></li>
+        </ul>
+      </div>
+      <form class="form" id="form" novalidate>
+        <label class="inp"><span>Имя *</span><input name="name" required autocomplete="name"></label>
+        <label class="inp"><span>Телефон *</span><input name="phone" type="tel" required autocomplete="tel"></label>
+        <label class="inp"><span>Email *</span><input name="email" type="email" required autocomplete="email"></label>
+        <label class="inp"><span>Город</span><input name="city" autocomplete="address-level2"></label>
+        <label class="inp inp--wide"><span>О мероприятии *</span><textarea name="comment" id="comment" rows="4" required placeholder="Название, даты, ожидаемое число участников"></textarea></label>
+        <div class="form__foot">
+          <button class="btn btn--acc" type="submit">Отправить заявку</button>
+          <p class="note">* обязательные поля</p>
+        </div>
+        <div class="form__done" hidden>
+          <h3>Заявка отправлена</h3>
+          <p>Менеджер свяжется с вами в течение рабочего дня.</p>
+        </div>
+      </form>
+    </div>
+    <footer class="wrap footer">
+      <span>© 2026 djedai</span>
+    </footer>
+  </section>
+</main>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
