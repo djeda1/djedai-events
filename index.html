@@ -6,328 +6,280 @@
 <title>DJEDAI — регистрация участников мероприятий</title>
 <meta name="description" content="Регистрация и аккредитация участников выставок, форумов и конференций под ключ: ПО, оборудование, персонал, бейдж за 10 секунд, аналитика после события.">
 <meta name="color-scheme" content="light">
+<meta name="theme-color" content="#ECEFE9">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Onest:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="wrap header__in">
-    <a class="logo" href="#top">DJEDAI</a>
-    <nav class="menu" aria-label="Разделы">
-      <a href="#services">Услуги</a>
-      <a href="#process">Процесс</a>
-      <a href="#calc">Расчёт</a>
-      <a href="#report">Аналитика</a>
-      <a href="#contact">Контакты</a>
-    </nav>
-    <a class="header__phone" href="tel:+77752080996">+7 775 208 09 96</a>
-    <button class="burger" aria-label="Меню" aria-expanded="false"><span></span><span></span></button>
-  </div>
+<header class="top">
+  <a class="logo" href="#entry" aria-label="DJEDAI, к входу"><i aria-hidden="true"></i>DJEDAI</a>
+  <p class="here" aria-live="polite"><i aria-hidden="true"></i>Вы здесь · <b id="hereName">Вход</b></p>
+  <a class="btn btn--ink" href="#contact">Оставить заявку</a>
 </header>
 
-<main id="top">
+<nav class="mm" aria-label="План площадки">
+  <p class="mm__title">План площадки</p>
+  <ol>
+    <li><a href="#entry" data-for="entry"><i></i><span>A · Вход</span></a></li>
+    <li><a href="#route" data-for="route"><i></i><span>B · Маршрут гостя</span></a></li>
+    <li><a href="#hall" data-for="hall"><i></i><span>C · Залы</span></a></li>
+    <li><a href="#sim" data-for="sim"><i></i><span>D · Симулятор входа</span></a></li>
+    <li><a href="#board" data-for="board"><i></i><span>E · Табло</span></a></li>
+    <li><a href="#clients" data-for="clients"><i></i><span>F · Здесь уже были</span></a></li>
+    <li><a href="#contact" data-for="contact"><i></i><span>G · Инфостойка</span></a></li>
+  </ol>
+</nav>
 
-  <!-- Первый экран -->
-  <section class="hero">
-    <div class="wrap hero__in">
-      <div class="hero__text">
-        <h1>Очередь на входе&nbsp;— <span class="hl">наша забота</span></h1>
-        <p class="lead">Регистрация и аккредитация участников под ключ: программное обеспечение, оборудование, персонал и база данных после события.</p>
+<main class="venue">
+
+  <!-- A · ВХОД -->
+  <section class="zone zone--entry" id="entry" data-name="Вход">
+    <p class="zone__tag">Зона A · Вход</p>
+    <div class="entry">
+      <div class="entry__text">
+        <p class="live"><i aria-hidden="true"></i><b id="liveCount">4 812</b>&nbsp;гостей уже прошли регистрацию</p>
+        <h1>Очередь на входе&nbsp;—<br><span>наша забота</span></h1>
+        <p class="lead">Регистрация и аккредитация участников выставок, форумов и конференций под ключ: программное обеспечение, оборудование, персонал и база данных после события.</p>
         <div class="actions">
-          <a class="btn btn--acc" href="#contact">Оставить заявку</a>
-          <a class="btn btn--line" href="#calc">Рассчитать стойки</a>
+          <a class="btn btn--ink" href="#contact">Оставить заявку</a>
+          <a class="btn btn--soft" href="#sim">Собрать свой вход</a>
         </div>
       </div>
-
-      <div class="hero__visual">
-        <div class="lanyard" aria-hidden="true"><span></span><span></span></div>
-        <div class="badge" id="badge" role="img" aria-label="Пример бейджа участника с QR-кодом">
-          <div class="badge__clip"></div>
-          <div class="badge__head"><span>Energy Forum</span><span>Астана · 2026</span></div>
-          <div class="badge__body">
-            <div class="badge__ava" id="badgeAva">АС</div>
-            <p class="badge__name" id="badgeName">Айгерим<br>Садыкова</p>
-            <p class="badge__org" id="badgeOrg">KazMunai Systems</p>
-            <div class="badge__qr"><svg class="qr" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg><i class="laser"></i></div>
-          </div>
-          <div class="badge__status" id="badgeStatus" data-s="vip">VIP · все зоны</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrap">
-      <dl class="stats">
-        <div><dt>10 сек</dt><dd>на одного гостя</dd></div>
-        <div><dt>15 000</dt><dd>гостей на одном событии</dd></div>
-        <div><dt>60+</dt><dd>проведённых мероприятий</dd></div>
-        <div><dt>100%</dt><dd>довольных заказчиков</dd></div>
-      </dl>
-    </div>
-  </section>
-
-  <!-- Услуги -->
-  <section class="section" id="services">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>Что мы делаем?</h2>
-        <p class="lead">Первое впечатление о мероприятии создаёт регистрация. Мы отвечаем за всё, что происходит на входе.</p>
-      </header>
-      <div class="cols">
-        <article>
-          <h3>Система регистрации под&nbsp;ключ</h3>
-          <p>Полный цикл регистрации и аккредитации участников и посетителей: от формы на сайте до бейджа на стойке.</p>
-        </article>
-        <article>
-          <h3>Персонал на время события</h3>
-          <p>Вежливые регистраторы со знанием иностранных языков, обученные работе с нашим ПО.</p>
-        </article>
-        <article>
-          <h3>Сбор и анализ данных</h3>
-          <p>После мероприятия передаём точный анализ посещаемости и полную базу участников.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Процесс -->
-  <section class="section" id="process">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>Как проходит регистрация?</h2>
-        <p class="lead">Четыре шага от приглашения до отчёта.</p>
-      </header>
-      <div class="flow">
-        <div class="flow__tabs" role="tablist" aria-label="Шаги регистрации">
-          <button role="tab" aria-selected="true" data-step="0"><span class="flow__n">1</span><b>До события</b><small>Онлайн-регистрация и электронный билет</small></button>
-          <button role="tab" aria-selected="false" tabindex="-1" data-step="1"><span class="flow__n">2</span><b>На входе</b><small>Сканирование и бейдж за 10 секунд</small></button>
-          <button role="tab" aria-selected="false" tabindex="-1" data-step="2"><span class="flow__n">3</span><b>Внутри</b><small>Доступ по зонам, секциям и статусам</small></button>
-          <button role="tab" aria-selected="false" tabindex="-1" data-step="3"><span class="flow__n">4</span><b>После</b><small>Аналитика и полная база данных</small></button>
-        </div>
-
-        <div class="flow__stage">
-          <div class="panel is-on" role="tabpanel">
-            <div class="mock">
-              <div class="mock__bar"><i></i><i></i><i></i><span>energyforum.kz/register</span></div>
-              <div class="mock__in">
-                <div class="mock__f"><small>Имя и фамилия</small><span>Айгерим Садыкова</span></div>
-                <div class="mock__f"><small>Компания</small><span>KazMunai Systems</span></div>
-                <div class="mock__f"><small>Статус</small><span class="chips"><em>Участник</em><em class="on">VIP</em><em>Пресса</em></span></div>
-                <div class="mock__btn">Зарегистрироваться</div>
-              </div>
-            </div>
-            <div class="ticket">
-              <div><small>Электронный билет</small><b>Energy Forum 2026</b><small>14–15 мая · EXPO, Астана</small></div>
-              <svg class="qr qr--sm" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg>
-            </div>
-            <p class="panel__note">Билет приходит на почту и в WhatsApp. На входе гостю не нужно ничего диктовать — только показать QR.</p>
-          </div>
-
-          <div class="panel" role="tabpanel">
-            <div class="scan">
-              <div class="scan__frame"><svg class="qr qr--md" viewBox="0 0 25 25" shape-rendering="crispEdges"></svg><i class="laser"></i></div>
-              <ul class="scan__log">
-                <li><span>09:14:02</span>QR считан</li>
-                <li><span>09:14:02</span>Найден: Садыкова А. · VIP</li>
-                <li><span>09:14:04</span>Бейдж отправлен на принтер №3</li>
-                <li class="ok"><span>09:14:09</span>Бейдж выдан</li>
-              </ul>
-            </div>
-            <div class="timer"><span id="stepTimer">7,5</span><p>секунд от сканирования до бейджа в руке</p></div>
-          </div>
-
-          <div class="panel" role="tabpanel">
-            <div class="zones">
-              <div class="zone"><b>Пленарный зал</b><span class="st-ok">Открыт</span><small>Все статусы</small></div>
-              <div class="zone"><b>VIP-лаунж</b><span class="st-ok">Открыт</span><small>VIP и спикеры</small></div>
-              <div class="zone"><b>Секция «Нефтегаз»</b><span class="st-warn">По регламенту</span><small>10:00–12:30</small></div>
-              <div class="zone"><b>Пресс-центр</b><span class="st-no">Закрыт</span><small>Только пресса</small></div>
-            </div>
-            <div class="turnstile"><span>Турникет 2 · Садыкова А.</span><b>Доступ разрешён</b></div>
-          </div>
-
-          <div class="panel" role="tabpanel">
-            <div class="kpis">
-              <div><b>87%</b><small>явка от зарегистрированных</small></div>
-              <div><b>09:15</b><small>пик входа</small></div>
-              <div><b>9,6 с</b><small>среднее время</small></div>
-            </div>
-            <div class="export"><span>Экспорт базы</span><em>XLSX</em><em>CSV</em><em>PDF-отчёт</em><em>API</em></div>
-            <p class="panel__note">Через 24 часа после закрытия — отчёт по дням, зонам, статусам и источникам регистрации.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Преимущества -->
-  <section class="section" id="advantages">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>Меньше хаоса на входе, больше данных на&nbsp;выходе</h2>
-      </header>
-      <div class="bento">
-        <article class="b b--queue">
-          <h3>Сокращение очередей</h3>
-          <p>Электронная регистрация на сайте события с выдачей электронного билета.</p>
-          <div class="queue" aria-hidden="true">
-            <div><small>Бумажные списки</small><span class="q q--old"><i style="--w:100%"></i></span><b>~25 мин</b></div>
-            <div><small>DJEDAI</small><span class="q q--new"><i style="--w:10%"></i></span><b>~2 мин</b></div>
-          </div>
-        </article>
-        <article class="b b--speed">
-          <p class="big">10 сек</p>
-          <h3>Оперативная выдача бейджей</h3>
-          <p>Печать на месте, без сортировки по алфавиту.</p>
-        </article>
-        <article class="b b--access">
-          <h3>Контроль доступа</h3>
-          <p>По секциям, по регламенту, по статусам.</p>
-          <div class="statuses"><span data-s="part">Участник</span><span data-s="vip">VIP</span><span data-s="press">Пресса</span><span data-s="speaker">Спикер</span><span data-s="staff">Организатор</span></div>
-        </article>
-        <article class="b b--soft">
-          <h3>Своё программное обеспечение</h3>
-          <p>Разработано под массовые мероприятия: онлайн-форма, офлайн-режим на стойках, синхронизация в реальном времени.</p>
-          <span class="sync"><i class="pulse"></i>12 стоек онлайн · 0 ошибок</span>
-        </article>
-        <article class="b b--gear">
-          <h3>Оборудование</h3>
-          <p>Техническая база для событий любого масштаба.</p>
-          <dl class="gear">
-            <div><dt>40</dt><dd>стоек</dd></div>
-            <div><dt>30</dt><dd>принтеров</dd></div>
-            <div><dt>60</dt><dd>сканеров</dd></div>
-            <div><dt>12</dt><dd>турникетов</dd></div>
-          </dl>
-        </article>
-        <article class="b b--staff">
-          <h3>Опытный персонал</h3>
-          <p>Квалифицированные вежливые регистраторы со знанием иностранных языков.</p>
-          <div class="langs"><span>RU</span><span>KZ</span><span>EN</span><span>中文</span><span>TR</span></div>
-        </article>
-        <article class="b b--image">
-          <h3>Никакой волокиты и&nbsp;сильный имидж</h3>
-          <p>Собираем данные из Excel, CRM и приглашений в одну базу без дублей. Стойки, бейджи и форма — в фирменном стиле события.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Расчёт -->
-  <section class="section" id="calc">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>Сколько стоек нужно вашему событию</h2>
-        <p class="lead">Предварительный расчёт, чтобы очередь на входе не превышала пары минут.</p>
-      </header>
-      <div class="calc">
-        <div class="calc__in">
-          <div class="field">
-            <label for="cGuests">Число гостей</label>
-            <output id="oGuests">3 000</output>
-            <input type="range" id="cGuests" min="100" max="15000" step="100" value="3000">
-          </div>
-          <div class="field">
-            <label for="cWindow">Основной заезд, часов</label>
-            <output id="oWindow">1,5</output>
-            <input type="range" id="cWindow" min="0.5" max="4" step="0.5" value="1.5">
-          </div>
-          <div class="field">
-            <label for="cPre">Зарегистрированы онлайн</label>
-            <output id="oPre">70%</output>
-            <input type="range" id="cPre" min="0" max="100" step="5" value="70">
-          </div>
-        </div>
-        <div class="calc__out" aria-live="polite">
-          <p class="calc__label">Рекомендуем</p>
-          <p class="calc__big"><span id="rStations">9</span> стоек</p>
-          <dl class="calc__list">
-            <div><dt>Регистраторов</dt><dd id="rStaff">11</dd></div>
-            <div><dt>Время на гостя</dt><dd id="rAvg">14,6 с</dd></div>
-            <div><dt>Ожидание в очереди</dt><dd id="rQueue">до 2 мин</dd></div>
-          </dl>
-          <a class="btn btn--acc" href="#contact" id="calcToForm">Отправить расчёт</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Аналитика -->
-  <section class="section" id="report">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>После события остаются не&nbsp;списки, а&nbsp;данные</h2>
-      </header>
-      <div class="dash">
-        <aside class="dash__side">
-          <div class="dash__title"><b>Energy Forum 2026</b><small>День 1 · 14 мая</small></div>
-          <div class="kpi"><small>Зарегистрировано</small><b>5 530</b></div>
-          <div class="kpi"><small>Пришли</small><b>4 812</b><em>87%</em></div>
-          <div class="kpi"><small>Среднее время у стойки</small><b>9,6 с</b></div>
-          <div class="split">
-            <small>По статусам</small>
-            <div class="split__bar"><i data-s="part" style="--w:64%"></i><i data-s="vip" style="--w:8%"></i><i data-s="press" style="--w:6%"></i><i data-s="speaker" style="--w:5%"></i><i data-s="staff" style="--w:17%"></i></div>
-            <ul class="legend"><li data-s="part">Участники 64%</li><li data-s="vip">VIP 8%</li><li data-s="press">Пресса 6%</li><li data-s="speaker">Спикеры 5%</li><li data-s="staff">Экспоненты 17%</li></ul>
-          </div>
-        </aside>
-        <div class="dash__main">
-          <div class="dash__head"><b>Вход гостей, каждые 15 минут</b><small id="chartTip">Наведите на столбец</small></div>
-          <div class="chart" id="chart" role="img" aria-label="Гистограмма входа гостей по 15-минутным интервалам, пик в 09:15"></div>
-          <div class="chart__axis" id="chartAxis"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Клиенты -->
-  <section class="section" id="clients">
-    <div class="wrap">
-      <header class="sec-head">
-        <h2>Нам доверяют</h2>
-      </header>
-      <ul class="clients">
-        <li>KDX</li><li>Auto Expo</li><li>IBM</li><li>BDL</li><li>Archi</li>
-        <li>ЖКХ Expo</li><li>SU</li><li>Farm KZ</li><li>Agro</li><li>Cteca</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Контакты -->
-  <section class="contact" id="contact">
-    <div class="wrap contact__in">
-      <div class="contact__text">
-        <h2>Расскажите о&nbsp;вашем событии</h2>
-        <p class="lead">Пришлём расчёт и план регистрации в течение рабочего дня.</p>
-        <ul class="contact__list">
-          <li><a href="mailto:djedai.dev@gmail.com">djedai.dev@gmail.com</a></li>
-          <li><a href="tel:+77752080996">+7 775 208 09 96</a></li>
-          <li><a href="tel:+77015224111">+7 701 522 41 11</a></li>
+      <div class="entry__map">
+        <canvas id="entrySim" role="img" aria-label="Анимированная схема входа: гости заходят с улицы, проходят стойки регистрации и турникеты"></canvas>
+        <ul class="map-notes" aria-label="Цифры">
+          <li style="--top:17%"><b>15 000</b>гостей на одном событии</li>
+          <li style="--top:42%"><b>10 сек</b>на одного гостя</li>
+          <li style="--top:auto;--bottom:16px"><b>60+ событий</b>100% довольных заказчиков</li>
         </ul>
       </div>
+    </div>
+  </section>
+
+  <!-- B · МАРШРУТ -->
+  <section class="zone zone--route" id="route" data-name="Маршрут гостя">
+    <p class="zone__tag">Зона B · Маршрут гостя</p>
+    <header class="zone__head">
+      <h2>Четыре остановки на пути гостя</h2>
+      <p class="lead">Листайте — и пройдите маршрут вместе с гостем: от письма с билетом до отчёта организатору.</p>
+    </header>
+    <div class="route" id="routeBox">
+      <svg class="route__svg" viewBox="0 0 1000 1200" preserveAspectRatio="none" aria-hidden="true">
+        <path class="route__base" id="routeBase" d="M140 40 C 140 200, 860 180, 860 330 S 140 470, 140 620 S 860 760, 860 910 S 500 1080, 500 1170"/>
+        <path class="route__done" id="routeDone" d="M140 40 C 140 200, 860 180, 860 330 S 140 470, 140 620 S 860 760, 860 910 S 500 1080, 500 1170"/>
+      </svg>
+      <span class="you" id="you" aria-hidden="true">Вы</span>
+      <ol class="stops">
+        <li class="stop" style="--x:14%;--y:3%">
+          <svg class="prop" viewBox="0 0 120 120" aria-hidden="true"><rect x="34" y="8" width="52" height="104" rx="12" fill="#fff" stroke="#263238" stroke-width="3"/><rect x="44" y="30" width="32" height="32" rx="4" fill="#DCEBE3"/><path d="M48 34h8v8h-8zM64 34h8v8h-8zM48 50h8v8h-8zM62 50h4v4h-4zM68 54h4v4h-4z" fill="#263238"/><rect x="44" y="72" width="32" height="6" rx="3" fill="#E6E0F6"/><rect x="44" y="84" width="22" height="6" rx="3" fill="#E6E0F6"/></svg>
+          <span class="stop__pin">1</span>
+          <div class="callout">
+            <p class="callout__time">За 3 недели · онлайн</p>
+            <h3>Билет приходит заранее</h3>
+            <p>Гость регистрируется на сайте события и получает электронный билет с QR-кодом на почту и в WhatsApp.</p>
+            <p class="callout__svc">Система регистрации под ключ</p>
+          </div>
+        </li>
+        <li class="stop stop--right" style="--x:86%;--y:27.5%">
+          <svg class="prop" viewBox="0 0 120 120" aria-hidden="true"><path d="M44 10 60 40 76 10" fill="none" stroke="#6E9BD6" stroke-width="6" stroke-linecap="round"/><rect x="40" y="36" width="40" height="52" rx="8" fill="#fff" stroke="#263238" stroke-width="3"/><circle cx="60" cy="56" r="8" fill="#F8DECB"/><rect x="50" y="70" width="20" height="5" rx="2.5" fill="#263238"/><rect x="10" y="94" width="100" height="18" rx="6" fill="#D6ECDF" stroke="#263238" stroke-width="3"/></svg>
+          <span class="stop__pin">2</span>
+          <div class="callout">
+            <p class="callout__time">08:30 · стойка</p>
+            <h3>Бейдж в руке за 7,5 секунды</h3>
+            <p>Регистратор сканирует код, система находит гостя и сразу печатает бейдж. Без списков по алфавиту.</p>
+            <p class="callout__svc">Персонал со знанием языков</p>
+          </div>
+        </li>
+        <li class="stop" style="--x:14%;--y:51.5%">
+          <svg class="prop" viewBox="0 0 120 120" aria-hidden="true"><rect x="18" y="30" width="18" height="76" rx="6" fill="#fff" stroke="#263238" stroke-width="3"/><rect x="84" y="30" width="18" height="76" rx="6" fill="#fff" stroke="#263238" stroke-width="3"/><path d="M36 62h30" stroke="#3F7564" stroke-width="6" stroke-linecap="round"/><circle cx="27" cy="44" r="4" fill="#6FAE92"/><path d="M60 20l10 10-10 10" fill="none" stroke="#3F7564" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="stop__pin">3</span>
+          <div class="callout">
+            <p class="callout__time">10:00 · турникет</p>
+            <h3>Доступ туда, куда положено</h3>
+            <p>Бейдж открывает только те залы, секции и лаунжи, которые положены гостю по статусу и регламенту.</p>
+            <p class="callout__svc">Контроль доступа</p>
+          </div>
+        </li>
+        <li class="stop stop--right" style="--x:86%;--y:75.8%">
+          <svg class="prop" viewBox="0 0 120 120" aria-hidden="true"><rect x="12" y="14" width="96" height="92" rx="10" fill="#fff" stroke="#263238" stroke-width="3"/><rect x="26" y="66" width="12" height="28" rx="3" fill="#DCE7F7"/><rect x="44" y="44" width="12" height="50" rx="3" fill="#DCE7F7"/><rect x="62" y="30" width="12" height="64" rx="3" fill="#3F7564"/><rect x="80" y="54" width="12" height="40" rx="3" fill="#DCE7F7"/></svg>
+          <span class="stop__pin">4</span>
+          <div class="callout">
+            <p class="callout__time">+24 часа · отчёт</p>
+            <h3>Организатор получает данные</h3>
+            <p>Посещаемость по дням, залам и статусам плюс полная база участников без дублей.</p>
+            <p class="callout__svc">Сбор и анализ данных</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- C · ЗАЛЫ -->
+  <section class="zone zone--hall" id="hall" data-name="Залы">
+    <p class="zone__tag">Зона C · Залы</p>
+    <header class="zone__head">
+      <h2>Каждый гость — в свой зал</h2>
+      <p class="lead">Это живая схема. Наведите на пункт легенды — и увидите, что именно мы делаем на площадке.</p>
+    </header>
+    <div class="hall">
+      <div class="hall__map"><canvas id="hallSim" role="img" aria-label="Схема залов: гости после турникетов расходятся по пленарному залу, VIP-лаунжу, пресс-центру и выставке"></canvas></div>
+      <aside class="legend" aria-label="Условные обозначения">
+        <p class="legend__title">Условные обозначения</p>
+        <ul>
+          <li><button data-hl="queue"><svg viewBox="0 0 32 32"><path d="M6 8v16M16 8v16M26 8v16" /></svg><span><b>Короткие очереди</b>Электронный билет — 2 минуты вместо 25</span></button></li>
+          <li><button data-hl="speed"><svg viewBox="0 0 32 32"><rect x="4" y="10" width="24" height="12" rx="6"/></svg><span><b>10 секунд на бейдж</b>Печать на месте, без сортировки</span></button></li>
+          <li><button data-hl="access"><svg viewBox="0 0 32 32"><circle cx="9" cy="16" r="4"/><circle cx="23" cy="16" r="4"/><path d="M16 6v20"/></svg><span><b>Контроль доступа</b>По секциям, регламенту, статусам</span></button></li>
+          <li><button data-hl="gear"><svg viewBox="0 0 32 32"><rect x="6" y="9" width="20" height="14" rx="3"/></svg><span><b>Оборудование</b>40 стоек, 30 принтеров, 60 сканеров, 12 турникетов</span></button></li>
+          <li><button data-hl="staff"><svg viewBox="0 0 32 32"><circle cx="16" cy="11" r="5"/><path d="M7 27c1-6 17-6 18 0"/></svg><span><b>Опытный персонал</b>Регистраторы говорят на RU, KZ, EN, 中文, TR</span></button></li>
+          <li><button data-hl="soft"><svg viewBox="0 0 32 32"><path d="M6 16h20M20 10l6 6-6 6"/></svg><span><b>Своё ПО</b>Офлайн-режим и синхронизация стоек</span></button></li>
+          <li><button data-hl="data"><svg viewBox="0 0 32 32"><ellipse cx="16" cy="9" rx="9" ry="4"/><path d="M7 9v14c0 2 4 4 9 4s9-2 9-4V9"/></svg><span><b>Без волокиты со списками</b>Excel, CRM и приглашения — в одну базу</span></button></li>
+          <li><button data-hl="brand"><svg viewBox="0 0 32 32"><path d="M8 26V6h16l-4 6 4 6H8"/></svg><span><b>Сильный имидж</b>Стойки и бейджи в стиле события</span></button></li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <!-- D · СИМУЛЯТОР -->
+  <section class="zone zone--sim" id="sim" data-name="Симулятор входа">
+    <p class="zone__tag">Зона D · Симулятор входа</p>
+    <header class="zone__head">
+      <h2>Соберите свой вход</h2>
+      <p class="lead">Задайте параметры события — мы посчитаем стойки и покажем, как поведёт себя очередь. Уберите пару стоек и посмотрите, что будет.</p>
+    </header>
+    <div class="sim">
+      <div class="sim__panel">
+        <div class="field">
+          <label for="cGuests">Гостей на событии</label>
+          <output id="oGuests">3 000</output>
+          <input type="range" id="cGuests" min="100" max="15000" step="100" value="3000">
+        </div>
+        <div class="field">
+          <label for="cWindow">Основной заезд, часов</label>
+          <output id="oWindow">1,5</output>
+          <input type="range" id="cWindow" min="0.5" max="4" step="0.5" value="1.5">
+        </div>
+        <div class="field">
+          <label for="cPre">Зарегистрированы онлайн</label>
+          <output id="oPre">70%</output>
+          <input type="range" id="cPre" min="0" max="100" step="5" value="70">
+        </div>
+        <div class="desks">
+          <span>Стоек на входе</span>
+          <div class="stepper">
+            <button type="button" id="dMinus" aria-label="Убрать стойку">−</button>
+            <output id="oDesks">9</output>
+            <button type="button" id="dPlus" aria-label="Добавить стойку">+</button>
+          </div>
+          <button type="button" class="link" id="dReset">Рекомендуем: <b id="rStations">9</b></button>
+        </div>
+      </div>
+      <div class="sim__map">
+        <canvas id="calcSim" role="img" aria-label="Симуляция очереди на входе с выбранным числом стоек"></canvas>
+        <dl class="sim__read" aria-live="polite">
+          <div><dt>Ожидание</dt><dd id="rQueue">до 2 мин</dd></div>
+          <div><dt>Регистраторов</dt><dd id="rStaff">11</dd></div>
+          <div><dt>Время на гостя</dt><dd id="rAvg">14,6 с</dd></div>
+        </dl>
+        <p class="sim__state" id="simState">Очередь под контролем</p>
+      </div>
+    </div>
+    <p class="sim__cta"><a class="btn btn--ink" href="#contact" id="calcToForm">Отправить этот расчёт</a></p>
+  </section>
+
+  <!-- E · ТАБЛО -->
+  <section class="zone zone--board" id="board" data-name="Табло">
+    <p class="zone__tag">Зона E · Табло</p>
+    <header class="zone__head">
+      <h2>После события — данные, а&nbsp;не&nbsp;списки</h2>
+      <p class="lead">Energy Forum, день первый. Каждая точка — 40 гостей.</p>
+    </header>
+    <div class="board">
+      <div class="board__chart">
+        <div class="dots" id="dotChart" role="img" aria-label="Вход гостей по 15-минутным интервалам, пик в 09:15"></div>
+        <div class="dots__axis" id="dotAxis"></div>
+        <p class="dots__tip" id="dotTip">Наведите на столбец</p>
+      </div>
+      <div class="board__side">
+        <dl class="kpis">
+          <div><dt>5 530</dt><dd>зарегистрировано</dd></div>
+          <div><dt>4 812</dt><dd>пришли · 87%</dd></div>
+          <div><dt>9,6 с</dt><dd>среднее время у стойки</dd></div>
+        </dl>
+        <div class="waffle" id="waffle" role="img" aria-label="Гости по статусам: участники 70%, VIP 9%, пресса 8%, спикеры 13%"></div>
+        <ul class="wkey">
+          <li style="--c:var(--s-part)">Участники 70%</li>
+          <li style="--c:var(--s-vip)">VIP 9%</li>
+          <li style="--c:var(--s-press)">Пресса 8%</li>
+          <li style="--c:var(--s-speaker)">Спикеры 13%</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- F · ЗДЕСЬ УЖЕ БЫЛИ -->
+  <section class="zone zone--clients" id="clients" data-name="Здесь уже были">
+    <p class="zone__tag">Зона F · Здесь уже были</p>
+    <header class="zone__head">
+      <h2>Залы, где мы встречали гостей</h2>
+    </header>
+    <ul class="rooms" id="rooms">
+      <li style="--c:var(--r-blue)">KDX</li>
+      <li style="--c:var(--r-apricot)">Auto Expo</li>
+      <li style="--c:var(--r-mint)">IBM</li>
+      <li style="--c:var(--r-lilac)">BDL</li>
+      <li style="--c:var(--r-butter)">Archi</li>
+      <li style="--c:var(--r-mint)">ЖКХ Expo</li>
+      <li style="--c:var(--r-lilac)">SU</li>
+      <li style="--c:var(--r-blue)">Farm KZ</li>
+      <li style="--c:var(--r-butter)">Agro</li>
+      <li style="--c:var(--r-apricot)">Cteca</li>
+    </ul>
+  </section>
+
+  <!-- G · ИНФОСТОЙКА -->
+  <section class="zone zone--info" id="contact" data-name="Инфостойка">
+    <p class="zone__tag">Зона G · Инфостойка</p>
+    <header class="zone__head">
+      <h2>Расскажите о&nbsp;вашем событии</h2>
+      <p class="lead">Пришлём расчёт и план регистрации в течение рабочего дня.</p>
+    </header>
+    <div class="info">
       <form class="form" id="form" novalidate>
         <label class="inp"><span>Имя *</span><input name="name" required autocomplete="name"></label>
         <label class="inp"><span>Телефон *</span><input name="phone" type="tel" required autocomplete="tel"></label>
         <label class="inp"><span>Email *</span><input name="email" type="email" required autocomplete="email"></label>
         <label class="inp"><span>Город</span><input name="city" autocomplete="address-level2"></label>
-        <label class="inp inp--wide"><span>О мероприятии *</span><textarea name="comment" id="comment" rows="4" required placeholder="Название, даты, ожидаемое число участников"></textarea></label>
+        <label class="inp inp--wide"><span>О мероприятии *</span><textarea name="comment" id="comment" rows="3" required placeholder="Название, даты, ожидаемое число участников"></textarea></label>
         <div class="form__foot">
-          <button class="btn btn--acc" type="submit">Отправить заявку</button>
+          <button class="btn btn--ink" type="submit" id="send">Отправить заявку</button>
           <p class="note">* обязательные поля</p>
         </div>
-        <div class="form__done" hidden>
-          <h3>Заявка отправлена</h3>
-          <p>Менеджер свяжется с вами в течение рабочего дня.</p>
-        </div>
+        <span class="walker" id="walker" aria-hidden="true"></span>
       </form>
+      <div class="desk">
+        <div class="desk__sign">
+          <p class="desk__title">Инфостойка DJEDAI</p>
+          <ul>
+            <li><a href="mailto:djedai.dev@gmail.com">djedai.dev@gmail.com</a></li>
+            <li><a href="tel:+77752080996">+7 775 208 09 96</a></li>
+            <li><a href="tel:+77015224111">+7 701 522 41 11</a></li>
+          </ul>
+        </div>
+        <div class="desk__top" id="deskTop" aria-hidden="true"><i></i><i></i><span>Свободно · вы следующий</span></div>
+        <p class="desk__done" id="deskDone" role="status"></p>
+      </div>
     </div>
-    <footer class="wrap footer">
-      <span>© 2026 djedai</span>
-    </footer>
   </section>
 </main>
+
+<footer class="foot">
+  <span class="logo"><i aria-hidden="true"></i>DJEDAI</span>
+  <span>Выход · © 2026 djedai</span>
+</footer>
 
 <script src="js/main.js" defer></script>
 </body>
